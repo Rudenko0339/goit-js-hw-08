@@ -23,9 +23,13 @@ function onFormSumbit(e) {
 }
 
 function onInput(e) {
-  formData[e.target.name] = e.target.value;
+  const data = {};
+  data.email = refs.email.value;
+  data.message = refs.message.value;
 
-  localStorage.setItem('formData', JSON.stringify(formData));
+  // formData[e.target.name] = e.target.value;
+
+  localStorage.setItem('formData', JSON.stringify(data));
 }
 
 function getLocalStorageItems() {
